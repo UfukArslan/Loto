@@ -138,6 +138,12 @@ public class Swing3_4 implements Runnable  {
 	    		}
 	    	}
 	    });
+	    
+	    close.addActionListener(new ActionListener(){
+	    	public void actionPerformed(ActionEvent e) {
+	    		frame.dispose();
+	    	}
+	    });
 
 	}
 	
@@ -316,6 +322,7 @@ public class Swing3_4 implements Runnable  {
 	    			public void mouseEntered(MouseEvent e) {
 	  	            	Color background = x.getBackground();
 	  		 	    	int c = background.getRGB();
+	  		 	    	System.out.println(c);
 	  		 	    	if (c == -65536) {
 	  		 	    			x.setBackground(Color.RED);
 	  		 	    	}else{
