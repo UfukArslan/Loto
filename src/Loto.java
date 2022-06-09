@@ -38,6 +38,7 @@ public class Loto implements Runnable  {
 	JButton close = new JButton("Close");
 	JButton help = new JButton("Help");
 	JButton token = new JButton("Token");
+	JMenuItem mnuNewFile = new JMenuItem("New part");
 	
 	
 	JLabel labelNumber = new JLabel(String.valueOf("..."), SwingConstants.CENTER);
@@ -47,6 +48,8 @@ public class Loto implements Runnable  {
 	ArrayList<JButton>[][] lBtn = new ArrayList[3][9];
 	List listHistoricNumber = new ArrayList();
 	JList list = new JList();
+	
+	
 	
 	
 	/* Building the GUI */
@@ -142,9 +145,18 @@ public class Loto implements Runnable  {
 	    close.addActionListener(new ActionListener(){
 	    	public void actionPerformed(ActionEvent e) {
 	    		frame.dispose();
+	    		
 	    	}
 	    });
-
+	    
+	    mnuNewFile.addActionListener(new ActionListener(){
+	    	public void actionPerformed(ActionEvent e) {
+	    		main(null);
+	    		frame.dispose();
+	    		
+	    	}
+	    });
+	    
 	}
 	
 	public List<Number> checkSelectedCase() {
@@ -273,7 +285,7 @@ public class Loto implements Runnable  {
 		
 		//Definition the "File" drop-down menu and its content
 		JMenu mnuFile = new JMenu ("File");
-		JMenuItem mnuNewFile = new JMenuItem("New part");
+		
 		mnuFile.add(mnuNewFile);
 		menuBar.add(mnuFile);
 		
