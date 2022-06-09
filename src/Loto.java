@@ -49,6 +49,8 @@ public class Loto implements Runnable  {
 	JList list = new JList();
 	
 	
+	
+	
 	/* Building the GUI */
 	public void run() {
     	
@@ -76,6 +78,7 @@ public class Loto implements Runnable  {
 	    					"Bravo! Vous avez gagné le troisième prix",
 	    				    "Message",
 	    				    JOptionPane.PLAIN_MESSAGE);
+	    			System.out.println("TOKEN BAG IS EMPTY ");
 	    	    	
 	    	    }else {
 	    	    	JOptionPane.showMessageDialog(frame,
