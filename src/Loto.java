@@ -38,6 +38,7 @@ public class Loto implements Runnable  {
 	JButton close = new JButton("Close");
 	JButton help = new JButton("Help");
 	JButton token = new JButton("Token");
+	JMenuItem mnuNewFile = new JMenuItem("New part");
 	
 	
 	JLabel labelNumber = new JLabel(String.valueOf("..."), SwingConstants.CENTER);
@@ -78,7 +79,6 @@ public class Loto implements Runnable  {
 	    					"Bravo! Vous avez gagné le troisième prix",
 	    				    "Message",
 	    				    JOptionPane.PLAIN_MESSAGE);
-	    			System.out.println("TOKEN BAG IS EMPTY ");
 	    	    	
 	    	    }else {
 	    	    	JOptionPane.showMessageDialog(frame,
@@ -145,8 +145,19 @@ public class Loto implements Runnable  {
 	    close.addActionListener(new ActionListener(){
 	    	public void actionPerformed(ActionEvent e) {
 	    		frame.dispose();
+	    		
 	    	}
 	    });
+	    
+	    mnuNewFile.addActionListener(new ActionListener(){
+	    	public void actionPerformed(ActionEvent e) {
+	    		main(null);
+	    		frame.dispose();
+	    		
+	    	}
+	    });
+	    
+	    
 
 	}
 	
@@ -276,7 +287,7 @@ public class Loto implements Runnable  {
 		
 		//Definition the "File" drop-down menu and its content
 		JMenu mnuFile = new JMenu ("File");
-		JMenuItem mnuNewFile = new JMenuItem("New part");
+		
 		mnuFile.add(mnuNewFile);
 		menuBar.add(mnuFile);
 		
