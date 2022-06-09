@@ -26,7 +26,7 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
-public class Swing3_4 implements Runnable  {
+public class Loto implements Runnable  {
 	
 	
 	/* GUI property */
@@ -357,7 +357,7 @@ public class Swing3_4 implements Runnable  {
     }
 
 	 public static void main(String []argv) {
-			SwingUtilities.invokeLater(new Swing3_4());	
+			SwingUtilities.invokeLater(new Loto());	
 	}
 	
 }
