@@ -157,8 +157,6 @@ public class Loto implements Runnable  {
 	    	}
 	    });
 	    
-	    
-
 	}
 	
 	public List<Number> checkSelectedCase() {
