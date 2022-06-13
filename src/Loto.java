@@ -72,7 +72,10 @@ public class Loto implements Runnable  {
 	    
 	    frame.addWindowListener(new WindowAdapter(){
 	    	public void windowClosing(java.awt.event.WindowEvent e) {
-	    		int clickClose = JOptionPane.showConfirmDialog(frame, "Etes-vous sûr de vouloir quitter?", "Close Window", JOptionPane.YES_NO_OPTION);
+	    		int clickClose = JOptionPane.showConfirmDialog(frame, 
+	    				"Etes-vous sûr de vouloir quitter?", 
+	    				"Close Window", 
+	    				JOptionPane.YES_NO_OPTION);
 	    		if ( clickClose == JOptionPane.YES_OPTION) {
 	    			frame.dispose();
 	    		}
@@ -155,19 +158,22 @@ public class Loto implements Runnable  {
 	    
 	    close.addActionListener(new ActionListener(){
 	    	public void actionPerformed(ActionEvent e) {
-	    		int clickClose = JOptionPane.showConfirmDialog(frame, "Etes-vous sûr de vouloir quitter?", "Close Window", JOptionPane.YES_NO_OPTION);
+	    		int clickClose = JOptionPane.showConfirmDialog(frame, 
+	    				"Etes-vous sûr de vouloir quitter?", 
+	    				"Close Window", 
+	    				JOptionPane.YES_NO_OPTION);
 	    		if ( clickClose == JOptionPane.YES_OPTION) {
 	    			frame.dispose();
 	    		}
 	    	}
 	    });
 	    
-	   
-	    
 	    mnuNewFile.addActionListener(new ActionListener(){
 	    	public void actionPerformed(ActionEvent e) {
-	    		
-	    		int clickClose = JOptionPane.showConfirmDialog(frame, "Etes-vous sûr de vouloir une nouvelle partie?", "Nouvelle partie", JOptionPane.YES_NO_OPTION);
+	    		int clickClose = JOptionPane.showConfirmDialog(frame, 
+	    				"Etes-vous sûr de vouloir une nouvelle partie?", 
+	    				"Nouvelle partie", 
+	    				JOptionPane.YES_NO_OPTION);
 	    		if ( clickClose == JOptionPane.YES_OPTION) {
 	    			main(null);
 		    		frame.dispose();
@@ -175,8 +181,6 @@ public class Loto implements Runnable  {
 	    		
 	    	}
 	    });
-	    
-	    
 	}
 	
 	public List<Number> checkSelectedCase() {
