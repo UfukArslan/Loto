@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -35,7 +36,7 @@ public class Loto implements Runnable  {
 	JButton doubleQuin = new JButton("Double Quin");
 	JButton carton = new JButton("Carton");
 	JButton buy = new JButton("Buy");
-	JButton parameters = new JButton("Parameters");
+	JButton parameters = new JButton("Themes");
 	JButton close = new JButton("Close");
 	JButton help = new JButton("Help");
 	JButton token = new JButton("Token");
@@ -156,6 +157,14 @@ public class Loto implements Runnable  {
 	    	}
 	    });
 	    
+	    parameters.addActionListener(new ActionListener() {
+	    	
+	    	public void actionPerformed(ActionEvent e) {
+	    		Dialog d = new Dialog();
+
+	    	}
+	    });
+	    
 	    close.addActionListener(new ActionListener(){
 	    	public void actionPerformed(ActionEvent e) {
 	    		int clickClose = JOptionPane.showConfirmDialog(frame, 
@@ -232,7 +241,6 @@ public class Loto implements Runnable  {
 		//setListData method of the class JList allows display listHistoricNumber list at each update
 		list.setListData(listHistoricNumber.toArray());
 	
-
 	}
 	
 	/* Construction of the NORTH area */
@@ -265,7 +273,6 @@ public class Loto implements Runnable  {
 		  
 	    JPanel contentPaneCenter = new JPanel(new GridLayout(3,3, 2, 2));
 	   
-	    System.out.println(contentPaneCenter);
 	    //Injection of squares in the central area
 	    for(int y = 0; y < 3; y++) {  
 	    	
