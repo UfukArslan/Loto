@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -56,7 +57,7 @@ public class Loto implements Runnable  {
 	public void run() {
     	
 		JFrame frame = new JFrame("LOTO");
-	    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	    frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 	    frame.setSize(1000, 800);
 	    frame.setLocationRelativeTo(null);
 	    frame.setVisible(true);  
@@ -67,6 +68,16 @@ public class Loto implements Runnable  {
 	    frame.getContentPane().add(this.createCentralArea(), BorderLayout.CENTER);
 	    frame.getContentPane().add(this.createSouthArea(), BorderLayout.SOUTH);
 	    frame.setJMenuBar(this.createMenuBar());
+	    
+	    
+	    frame.addWindowListener(new WindowAdapter(){
+	    	public void windowClosing(java.awt.event.WindowEvent e) {
+	    		int clickClose = JOptionPane.showConfirmDialog(frame, "Etes-vous sûr de vouloir quitter?", "Close Window", JOptionPane.YES_NO_OPTION);
+	    		if ( clickClose == JOptionPane.YES_OPTION) {
+	    			frame.dispose();
+	    		}
+	    	}
+	    });	
 	    
 //	    test();
 	    
@@ -144,18 +155,27 @@ public class Loto implements Runnable  {
 	    
 	    close.addActionListener(new ActionListener(){
 	    	public void actionPerformed(ActionEvent e) {
-	    		frame.dispose();
+	    		int clickClose = JOptionPane.showConfirmDialog(frame, "Etes-vous sûr de vouloir quitter?", "Close Window", JOptionPane.YES_NO_OPTION);
+	    		if ( clickClose == JOptionPane.YES_OPTION) {
+	    			frame.dispose();
+	    		}
+	    	}
+	    });
+	    
+	   
+	    
+	    mnuNewFile.addActionListener(new ActionListener(){
+	    	public void actionPerformed(ActionEvent e) {
+	    		
+	    		int clickClose = JOptionPane.showConfirmDialog(frame, "Etes-vous sûr de vouloir une nouvelle partie?", "Nouvelle partie", JOptionPane.YES_NO_OPTION);
+	    		if ( clickClose == JOptionPane.YES_OPTION) {
+	    			main(null);
+		    		frame.dispose();
+	    		}
 	    		
 	    	}
 	    });
 	    
-	    mnuNewFile.addActionListener(new ActionListener(){
-	    	public void actionPerformed(ActionEvent e) {
-	    		main(null);
-	    		frame.dispose();
-	    		
-	    	}
-	    });
 	    
 	}
 	
