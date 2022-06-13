@@ -74,7 +74,7 @@ public class Loto implements Runnable  {
 	    frame.addWindowListener(new WindowAdapter(){
 	    	public void windowClosing(java.awt.event.WindowEvent e) {
 	    		int clickClose = JOptionPane.showConfirmDialog(frame, 
-	    				"Etes-vous sûr de vouloir quitter?", 
+	    				"Are you sure you want to leave?", 
 	    				"Close Window", 
 	    				JOptionPane.YES_NO_OPTION);
 	    		if ( clickClose == JOptionPane.YES_OPTION) {
@@ -91,13 +91,13 @@ public class Loto implements Runnable  {
 	    		
 	    	    if (5 == (int)l.get(0) || 5 == (int)l.get(1) || 5 == (int)l.get(2)) {
 	    			JOptionPane.showMessageDialog(frame,
-	    					"Bravo! Vous avez gagné le troisième prix",
+	    					"Cheer! You have won the third prize",
 	    				    "Message",
 	    				    JOptionPane.PLAIN_MESSAGE);
 	    	    	
 	    	    }else {
 	    	    	JOptionPane.showMessageDialog(frame,
-	    					"Vous avez perdu!!",
+	    					"You lost!!",
 	    				    "Message",
 	    				    JOptionPane.WARNING_MESSAGE);
 	    	    }
@@ -109,17 +109,17 @@ public class Loto implements Runnable  {
 	    		List<Number> l = checkSelectedCase();
 	    		if (5 == (int)l.get(0) && (5 == (int)l.get(1) || 5 == (int)l.get(2))) {
 	    			JOptionPane.showMessageDialog(frame,
-	    					"Bravo! Vous avez gagné le deuxième prix",
+	    					"Cheer! You have won the second prize",
 	    					"Message",
 	    					JOptionPane.PLAIN_MESSAGE);
 	    		    }else if (5 != (int)l.get(0) && 5 == (int)l.get(1) && 5 == (int)l.get(2)) {
 	    		    	JOptionPane.showMessageDialog(frame,
-		    			"Bravo! Vous avez gagné le deuxième prix",
+		    			"Cheer! You have won the second prize",
 		    			"Message",
 		    			JOptionPane.PLAIN_MESSAGE);
 	    		    }else {
 	    		    	JOptionPane.showMessageDialog(frame,
-	    		    	"Vous avez perdu!!",
+	    		    	"You lost!!",
 	    		    	"Message",
 	    		    	JOptionPane.WARNING_MESSAGE);
 	    		    }
@@ -131,12 +131,12 @@ public class Loto implements Runnable  {
 	     		List<Number> l = checkSelectedCase();
 	    		if (5 == (int)l.get(0) && 5 == (int)l.get(1) && 5 == (int)l.get(2)) {
 	    			JOptionPane.showMessageDialog(frame,
-	    					"Bravo! Vous avez gagné le premier prix",
+	    					"Cheer! You have won the first prize",
 		    				"Message",
 		    				JOptionPane.PLAIN_MESSAGE);
 	    		    }else {
 	    		    	JOptionPane.showMessageDialog(frame,
-	    		    	"Vous avez perdu!!",
+	    		    	"You lost!!",
 	    		    	"Message",
 	    		    	JOptionPane.WARNING_MESSAGE);
 	    		    }
@@ -150,7 +150,7 @@ public class Loto implements Runnable  {
 	    		}catch(IndexOutOfBoundsException error){
 	    			System.out.println("TOKEN BAG IS EMPTY ");
 	    			JOptionPane.showMessageDialog(frame,
-	    					"TOKEN BAG IS EMPTY ",
+	    					"TOKEN BAG IS EMPTY",
 	    				    "Message",
 	    				    JOptionPane.PLAIN_MESSAGE);
 	    		}
@@ -168,7 +168,7 @@ public class Loto implements Runnable  {
 	    close.addActionListener(new ActionListener(){
 	    	public void actionPerformed(ActionEvent e) {
 	    		int clickClose = JOptionPane.showConfirmDialog(frame, 
-	    				"Etes-vous sûr de vouloir quitter?", 
+	    				"Are you sure you want to leave?", 
 	    				"Close Window", 
 	    				JOptionPane.YES_NO_OPTION);
 	    		if ( clickClose == JOptionPane.YES_OPTION) {
@@ -180,8 +180,8 @@ public class Loto implements Runnable  {
 	    mnuNewFile.addActionListener(new ActionListener(){
 	    	public void actionPerformed(ActionEvent e) {
 	    		int clickClose = JOptionPane.showConfirmDialog(frame, 
-	    				"Etes-vous sûr de vouloir une nouvelle partie?", 
-	    				"Nouvelle partie", 
+	    				"Are you sure you want a new game?", 
+	    				"New part", 
 	    				JOptionPane.YES_NO_OPTION);
 	    		if ( clickClose == JOptionPane.YES_OPTION) {
 	    			main(null);
