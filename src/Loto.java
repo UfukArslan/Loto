@@ -359,6 +359,8 @@ public class Loto implements Runnable  {
 	    		
 	    		JButton x = lBtn[0][i].get(listIndex.get(j));
 	    		x.setText(String.valueOf(listButtonNumber.get(j)));
+	    		x.setBackground(Color.WHITE);
+	    		x.setForeground(Color.BLACK);
 	    		listButtonNumber.remove(j);
 	    		
 	    		x.addMouseListener(new MouseAdapter(){
@@ -380,16 +382,16 @@ public class Loto implements Runnable  {
 	  	            		x.setBackground(Color.RED);
 	  	 		            x.setForeground(Color.WHITE);
 	  	            	}else{
-	  	            		x.setBackground(Color.GRAY);
-	  	    		        x.setForeground(Color.WHITE);
+	  	            		x.setBackground(Color.WHITE);
+	  	    		        x.setForeground(Color.BLACK);
 	  	            		}
 	  		         	}     
 	  	            public void mouseClicked(MouseEvent e) {
 	  	            	Color background = x.getBackground();
 	  	 	    		int c = background.getRGB();
 	  	            	if(c == -65536) {
-	  	            		x.setBackground(Color.GRAY);
-	  	 		            x.setForeground(Color.WHITE);
+	  	            		x.setBackground(Color.WHITE);
+	  	 		            x.setForeground(Color.BLACK);
 	  	            	}else {
 	  	            		x.setBackground(Color.RED);
 	  	            		}	
