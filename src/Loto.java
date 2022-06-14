@@ -160,7 +160,7 @@ public class Loto implements Runnable  {
 	    parameters.addActionListener(new ActionListener() {
 	    	
 	    	public void actionPerformed(ActionEvent e) {
-	    		Dialog d = new Dialog();
+	    		Dialog d = new Dialog(Loto.this);
 
 	    	}
 	    });
@@ -367,7 +367,7 @@ public class Loto implements Runnable  {
 	    			public void mouseEntered(MouseEvent e) {
 	  	            	Color background = x.getBackground();
 	  		 	    	int c = background.getRGB();
-	  		 	    	System.out.println(c);
+	  		 	    	System.out.println("print c " + c);
 	  		 	    	if (c == -65536) {
 	  		 	    			x.setBackground(Color.RED);
 	  		 	    	}else{

@@ -1,7 +1,10 @@
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -10,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 
-public class Dialog {
+public class Dialog{
 	
 	JLabel l1 = new JLabel("Color card", 10);
 	
@@ -19,22 +22,37 @@ public class Dialog {
 	JCheckBox chGrey = new JCheckBox();
 	JCheckBox chRed = new JCheckBox();
 	
+	private Loto parent;
 	
 	
 	
-	public Dialog() {
-
+	public Dialog(Loto _parent) {
+		
+		parent = _parent;
+		
+		
 		JDialog dialog = new JDialog();
 		dialog.setSize(500,200);
 		dialog.setVisible(true);
 		dialog.setLocationRelativeTo(null);
-
 		dialog.getContentPane().add(this.createGrid());
+		
+		chGreen.addItemListener(new ItemListener() {
+		    @Override
+		    public void itemStateChanged(ItemEvent e) {
+		        if(e.getStateChange() == ItemEvent.SELECTED) {//checkbox has been selected
+		            System.out.println("hello1");
+		            changeColorCard();
+		           
+		        } else {//checkbox has been deselected
+		            System.out.println("hello2");
+		        };
+		    }
+		});
 	}
 	
 	public JPanel createGrid(){
 		
-		System.out.println("hello");
 		JPanel contentPane = new JPanel(new GridLayout(0,5));
 		chGreen.setBackground(Color.GREEN);
 		chGreen.setHorizontalAlignment(SwingConstants.CENTER);
@@ -51,11 +69,28 @@ public class Dialog {
 		contentPane.add(chGrey);
 		contentPane.add(chRed);
 	
-		
-		
 		return contentPane;
 	}
 	
+	
+	public void changeColorCard() {
+		
+		 for(int i = 0; i < 3; i++) {
+         	for(int j=0; j < 9; j++) {
+         		JButton x = parent.lBtn[0][i].get(j);
+         		Color background = x.getBackground();
+         		int c = background.getRGB();
+         		
+         		if( c != -1) {
+         			x.setBackground(Color.GREEN);
+             		x.setForeground(Color.BLACK);
+         		}
+         		
+    
+         	}
+         }
+		
+	}
 	
 	
 
