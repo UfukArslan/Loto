@@ -21,6 +21,7 @@ public class Dialog{
 	JCheckBox chBlue = new JCheckBox();
 	JCheckBox chCyan = new JCheckBox();
 	JCheckBox chRed = new JCheckBox();
+	JCheckBox chGray = new JCheckBox();
 	
 	private Loto parent;
 	
@@ -46,6 +47,7 @@ public class Dialog{
 		            chBlue.setSelected(false);
 		            chCyan.setSelected(false);
 		            chRed.setSelected(false);
+		            chGray.setSelected(false);
 		           
 		        } else if (e.getStateChange() == ItemEvent.DESELECTED) {//checkbox has been deselected
 //		        	 changeColorCard(Color.GRAY);
@@ -62,6 +64,7 @@ public class Dialog{
 		            chGreen.setSelected(false);
 		            chCyan.setSelected(false);
 		            chRed.setSelected(false);
+		            chGray.setSelected(false);
 		           
 		        } else if (e.getStateChange() == ItemEvent.DESELECTED) {//checkbox has been deselected
 //		        	 changeColorCard(Color.GRAY);
@@ -78,6 +81,7 @@ public class Dialog{
 		            chGreen.setSelected(false);
 		            chBlue.setSelected(false);
 		            chRed.setSelected(false);
+		            chGray.setSelected(false);
 		            
 		           
 		        } else if (e.getStateChange() == ItemEvent.DESELECTED )  {//checkbox has been deselected
@@ -95,6 +99,24 @@ public class Dialog{
 		            chGreen.setSelected(false);
 		            chBlue.setSelected(false);
 		            chCyan.setSelected(false);
+		            chGray.setSelected(false);
+		           
+		        } else if (e.getStateChange() == ItemEvent.DESELECTED) {//checkbox has been deselected
+//		        	 changeColorCard(Color.GRAY);
+		        };
+		    }
+		});
+		
+		chGray.addItemListener(new ItemListener() {
+		    @Override
+		    public void itemStateChanged(ItemEvent e) {
+		        if(e.getStateChange() == ItemEvent.SELECTED) {//checkbox has been selected
+		            System.out.println("hello1");
+		            changeColorCard(Color.GRAY);
+		            chGreen.setSelected(false);
+		            chBlue.setSelected(false);
+		            chCyan.setSelected(false);
+		            chRed.setSelected(false);
 		           
 		        } else if (e.getStateChange() == ItemEvent.DESELECTED) {//checkbox has been deselected
 //		        	 changeColorCard(Color.GRAY);
@@ -107,7 +129,7 @@ public class Dialog{
 	
 	public JPanel createGrid(){
 		
-		JPanel contentPane = new JPanel(new GridLayout(0,5));
+		JPanel contentPane = new JPanel(new GridLayout(0,6));
 		chGreen.setBackground(Color.GREEN);
 		chGreen.setHorizontalAlignment(SwingConstants.CENTER);
 		chBlue.setBackground(Color.BLUE);
@@ -116,12 +138,15 @@ public class Dialog{
 		chCyan.setHorizontalAlignment(SwingConstants.CENTER);
 		chRed.setBackground(Color.RED);
 		chRed.setHorizontalAlignment(SwingConstants.CENTER);
+		chGray.setBackground(Color.GRAY);
+		chGray.setHorizontalAlignment(SwingConstants.CENTER);
 		l1.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(l1);
 		contentPane.add(chGreen);
 		contentPane.add(chBlue);
 		contentPane.add(chCyan);
 		contentPane.add(chRed);
+		contentPane.add(chGray);
 	
 		return contentPane;
 	}
