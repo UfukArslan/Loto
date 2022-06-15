@@ -42,10 +42,10 @@ public class Dialog{
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {//checkbox has been selected
 		            System.out.println("hello1");
-		            changeColorCard();
+		            changeColorCard(Color.GREEN);
 		           
-		        } else {//checkbox has been deselected
-		            System.out.println("hello2");
+		        } else if (e.getStateChange() == ItemEvent.DESELECTED) {//checkbox has been deselected
+		        	 changeColorCard(Color.GRAY);
 		        };
 		    }
 		});
@@ -73,7 +73,7 @@ public class Dialog{
 	}
 	
 	
-	public void changeColorCard() {
+	public void changeColorCard(Color clr) {
 		
 		 for(int i = 0; i < 3; i++) {
          	for(int j=0; j < 9; j++) {
@@ -82,8 +82,8 @@ public class Dialog{
          		int c = background.getRGB();
          		
          		if( c != -1) {
-         			x.setBackground(Color.GREEN);
-             		x.setForeground(Color.BLACK);
+         			x.setBackground(clr);
+             		x.setForeground(clr);
          		}
          		
     
