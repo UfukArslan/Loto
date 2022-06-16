@@ -27,6 +27,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
 
 public class Loto implements Runnable  {
 	
@@ -58,7 +59,7 @@ public class Loto implements Runnable  {
 	public void run() {
     	
 		JFrame frame = new JFrame("LOTO");
-	    frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+	    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	    frame.setSize(1000, 800);
 	    frame.setLocationRelativeTo(null);
 	    frame.setVisible(true);  
@@ -161,7 +162,7 @@ public class Loto implements Runnable  {
 	    	
 	    	public void actionPerformed(ActionEvent e) {
 	    		Dialog d = new Dialog(Loto.this);
-
+	    		d.setSize(500, 200);
 	    	}
 	    });
 	    
