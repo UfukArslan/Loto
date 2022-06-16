@@ -36,7 +36,7 @@ public class Loto implements Runnable  {
 	JButton quin = new JButton("Quin");
 	JButton doubleQuin = new JButton("Double Quin");
 	JButton carton = new JButton("Carton");
-	JButton buy = new JButton("Buy");
+	
 	JButton parameters = new JButton("Themes");
 	JButton close = new JButton("Close");
 	JButton help = new JButton("Help");
@@ -301,7 +301,7 @@ public class Loto implements Runnable  {
 
 	    JPanel contentPaneSud = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 	    //Injection buttons in the SOUTH bar 
-	    contentPaneSud.add(buy);
+	  
 	    contentPaneSud.add(parameters);
 	    contentPaneSud.add(close);
 	    contentPaneSud.add(help);
@@ -316,20 +316,10 @@ public class Loto implements Runnable  {
 		JMenuBar menuBar = new JMenuBar();
 		
 		//Definition the "File" drop-down menu and its content
-		JMenu mnuFile = new JMenu ("File");
+		JMenu mnuFile = new JMenu ("NEW GAME");
 		
 		mnuFile.add(mnuNewFile);
 		menuBar.add(mnuFile);
-		
-		//Definition of the "Edit" drop-down menu and its content
-		JMenu mnuEdit = new JMenu ("Edit");
-		JMenuItem mnuUndo = new JMenuItem("Undo");
-		mnuEdit.add(mnuUndo);
-		menuBar.add(mnuEdit);
-		
-		//Definition of the "Help" drop-down menu and its contents
-		JMenu mnuHelp = new JMenu ("Help");
-		menuBar.add(mnuHelp);
 		
 		return menuBar;
 	}
