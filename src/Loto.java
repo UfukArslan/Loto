@@ -41,7 +41,7 @@ public class Loto implements Runnable  {
 	JButton close = new JButton("Close");
 	JButton help = new JButton("Help");
 	JButton token = new JButton("Token");
-	JMenuItem mnuNewFile = new JMenuItem("New part");
+	JMenuItem mnuNewFile = new JMenuItem("Start");
 	
 	
 	JLabel labelNumber = new JLabel(String.valueOf("..."), SwingConstants.CENTER);
@@ -98,7 +98,7 @@ public class Loto implements Runnable  {
 	    	    	
 	    	    }else {
 	    	    	JOptionPane.showMessageDialog(frame,
-	    					"You lost!!",
+	    					"NOPE!! Please check the drawn tokens in the history",
 	    				    "Message",
 	    				    JOptionPane.WARNING_MESSAGE);
 	    	    }
@@ -120,7 +120,7 @@ public class Loto implements Runnable  {
 		    			JOptionPane.PLAIN_MESSAGE);
 	    		    }else {
 	    		    	JOptionPane.showMessageDialog(frame,
-	    		    	"You lost!!",
+	    		    	"NOPE!! Please check the drawn tokens in the history",
 	    		    	"Message",
 	    		    	JOptionPane.WARNING_MESSAGE);
 	    		    }
@@ -137,7 +137,7 @@ public class Loto implements Runnable  {
 		    				JOptionPane.PLAIN_MESSAGE);
 	    		    }else {
 	    		    	JOptionPane.showMessageDialog(frame,
-	    		    	"You lost!!",
+	    		    	"NOPE!! Please check the drawn tokens in the history",
 	    		    	"Message",
 	    		    	JOptionPane.WARNING_MESSAGE);
 	    		    }
@@ -161,8 +161,14 @@ public class Loto implements Runnable  {
 	    parameters.addActionListener(new ActionListener() {
 	    	
 	    	public void actionPerformed(ActionEvent e) {
-	    		Dialog d = new Dialog(Loto.this);
-	    		d.setSize(500, 200);
+	    		DThemes d = new DThemes(Loto.this);
+	    	}
+	    });
+	    
+	    help.addActionListener(new ActionListener() {
+	    	public void actionPerformed(ActionEvent e) {
+	    		DHelp d = new DHelp(Loto.this);
+	    		
 	    	}
 	    });
 	    

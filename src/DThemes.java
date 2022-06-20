@@ -17,7 +17,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 
-public class Dialog extends JDialog {
+public class DThemes extends JDialog {
 	
 	JLabel l1 = new JLabel("Color card");
 	
@@ -29,7 +29,7 @@ public class Dialog extends JDialog {
 	
 	private Loto parent;
 	
-	public Dialog (Loto _parent) {
+	public DThemes (Loto _parent) {
 		
 		parent = _parent;
 	
@@ -128,10 +128,10 @@ public class Dialog extends JDialog {
 	        public void windowGainedFocus(WindowEvent e) {
 	        }
 	        public void windowLostFocus(WindowEvent e) {
-	          if (SwingUtilities.isDescendingFrom(e.getOppositeWindow(), Dialog.this)) {
+	          if (SwingUtilities.isDescendingFrom(e.getOppositeWindow(), DThemes.this)) {
 	            return;
 	          }
-	          Dialog.this.setVisible(false);
+	          DThemes.this.setVisible(false);
 	        }
 	      });
 	}
