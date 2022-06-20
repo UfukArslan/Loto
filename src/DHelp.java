@@ -52,13 +52,13 @@ public class DHelp extends JDialog {
 				+ "click on the card number to select it in red.<br><br>"
 				+ "<h2>How to win a lotto game:</h2>"
 				+ "<h3>QUIN:</h3>"
-				+ "The player can click on the “QUIN” button as soon as a line of the three rows is selected.<br>"
+				+ "The player can click on the \"QUIN\" button as soon as a line of the three rows is selected.<br>"
 				+ "After checking the numbers drawn, the player wins the third prize.<br>"
 				+ "<h3>DOUBLE QUIN:</h3>"
-				+ "The player can click on the “DOUBLE QUIN” button as soon as two lines of the three rows are selected.<br>"
+				+ "The player can click on the \"DOUBLE QUIN\" button as soon as two lines of the three rows are selected.<br>"
 				+ "After checking the numbers drawn, the player wins the second prize."
 				+ "<h3>CARTON:</h3>"
-				+ "The player can click on the “CARD” button as soon as three lines of the three rows are selected.<br>"
+				+ "The player can click on the \"CARD\" button as soon as three lines of the three rows are selected.<br>"
 				+ "After checking the numbers drawn, the player wins the first prize."
 				+ "</HTML>";
 	}
