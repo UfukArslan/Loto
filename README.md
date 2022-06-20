@@ -25,6 +25,11 @@ L’objectif est de répondre aux différentes solutions que peut offrir la bibl
 ![alt text for screen readers](./assets/Protype_Loto.jpg "Text to show on mouseover")
 
 
+
+## Amélioration
+
+Système de tirage automatique des jetons.
+
 ## Problèmes rencontrés
 
 

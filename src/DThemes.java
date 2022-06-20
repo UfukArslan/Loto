@@ -27,13 +27,14 @@ public class DThemes extends JDialog {
 	JCheckBox chMagenta = new JCheckBox();
 	JCheckBox chGray = new JCheckBox();
 	
-	private Loto parent;
+	private Lotto parent;
 	
-	public DThemes (Loto _parent) {
+	public DThemes (Lotto _parent) {
 		
 		parent = _parent;
 	
 		this.setSize(500, 200);
+		this.setTitle("THEMES");
 		this.setVisible(true);
 		this.setLocationRelativeTo(null);
 		this.setContentPane(this.createGrid());

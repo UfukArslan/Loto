@@ -29,7 +29,7 @@ import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
-public class Loto implements Runnable  {
+public class Lotto implements Runnable  {
 	
 	
 	/* GUI property */
@@ -58,7 +58,7 @@ public class Loto implements Runnable  {
 	/* Building the GUI */
 	public void run() {
     	
-		JFrame frame = new JFrame("LOTO");
+		JFrame frame = new JFrame("LOTTO");
 	    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	    frame.setSize(1000, 800);
 	    frame.setLocationRelativeTo(null);
@@ -161,13 +161,13 @@ public class Loto implements Runnable  {
 	    parameters.addActionListener(new ActionListener() {
 	    	
 	    	public void actionPerformed(ActionEvent e) {
-	    		DThemes d = new DThemes(Loto.this);
+	    		DThemes d = new DThemes(Lotto.this);
 	    	}
 	    });
 	    
 	    help.addActionListener(new ActionListener() {
 	    	public void actionPerformed(ActionEvent e) {
-	    		DHelp d = new DHelp(Loto.this);
+	    		DHelp d = new DHelp(Lotto.this);
 	    		
 	    	}
 	    });
@@ -399,7 +399,7 @@ public class Loto implements Runnable  {
     }
 
 	 public static void main(String []argv) {
-			SwingUtilities.invokeLater(new Loto());	
+			SwingUtilities.invokeLater(new Lotto());	
 	}
 	
 }
