@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
@@ -59,7 +58,7 @@ public class Lotto implements Runnable  {
 	public void run() {
     	
 		JFrame frame = new JFrame("LOTTO");
-	    frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+	    frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 	    frame.setSize(1000, 800);
 	    frame.setLocationRelativeTo(null);
 	    frame.setVisible(true);  
@@ -297,7 +296,7 @@ public class Lotto implements Runnable  {
 	    	}
 	    } 
 	    //Injection the random number in 15 buttons
-	    this.createCaseWithNumber();
+	    this.createCustomButton();
 
 		return contentPaneCenter;
 	}
@@ -344,7 +343,7 @@ public class Lotto implements Runnable  {
 	}
 	
     /* Create the cases with the 15 numbers */
-    private void createCaseWithNumber() {
+    private void createCustomButton() {
     	
     	List<Integer> listButtonNumber =  this.random(90);
     	
