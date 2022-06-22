@@ -83,8 +83,6 @@ public class Lotto implements Runnable  {
 	    	}
 	    });	
 	    
-//	    test();
-	    
 	    quin.addActionListener(new ActionListener(){
 	    	public void actionPerformed(ActionEvent e) {
 	    		List<Number> l = checkSelectedCase();
@@ -148,7 +146,6 @@ public class Lotto implements Runnable  {
 	    		try {
 	    			hangToken(e);
 	    		}catch(IndexOutOfBoundsException error){
-	    			System.out.println("TOKEN BAG IS EMPTY ");
 	    			JOptionPane.showMessageDialog(frame,
 	    					"TOKEN BAG IS EMPTY",
 	    				    "Message",
@@ -212,7 +209,7 @@ public class Lotto implements Runnable  {
 	    		JButton b = lBtn[0][i].get(j);
 	    		Color background = b.getBackground();
 	    		int c = background.getRGB();
-	    		System.out.println("COLOR " + i + c);
+	    		
 	    		if (c == -65536 && i == 0 && listHistoricNumber.contains(b.getText())) {
 	    			counterRow1 += 1;
 	    		  	}else if (c == -65536 && i == 1 && listHistoricNumber.contains(b.getText())){
@@ -349,7 +346,7 @@ public class Lotto implements Runnable  {
     	
 	    for(int i = 0; i < 3; i++) {
 	    	List<Integer> listIndex =  this.random(8);
-	    	System.out.println(listIndex);
+
 	    	//For each row, he must have five case with number
 	    	for(int j=0; j < 5; j++) {
 	    		
@@ -363,7 +360,7 @@ public class Lotto implements Runnable  {
 	    			public void mouseEntered(MouseEvent e) {
 	  	            	Color background = x.getBackground();
 	  		 	    	int c = background.getRGB();
-	  		 	    	System.out.println("print c " + c);
+	  		 	    	
 	  		 	    	if (c == -65536) {
 	  		 	    			x.setBackground(Color.RED);
 	  		 	    	}else{

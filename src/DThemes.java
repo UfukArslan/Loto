@@ -43,7 +43,6 @@ public class DThemes extends JDialog {
 		    @Override
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {
-		            System.out.println("hello1");
 		            changeColorCard(Color.GREEN);
 		            chBlue.setSelected(false);
 		            chCyan.setSelected(false);
@@ -60,7 +59,6 @@ public class DThemes extends JDialog {
 		    @Override
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {
-		            System.out.println("hello1");
 		            changeColorCard(Color.BLUE);
 		            chGreen.setSelected(false);
 		            chCyan.setSelected(false);
@@ -77,7 +75,6 @@ public class DThemes extends JDialog {
 		    @Override
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {
-		            System.out.println("hello1");
 		            changeColorCard(Color.CYAN);
 		            chGreen.setSelected(false);
 		            chBlue.setSelected(false);
@@ -95,7 +92,6 @@ public class DThemes extends JDialog {
 		    @Override
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {
-		            System.out.println("hello1");
 		            changeColorCard(Color.MAGENTA);
 		            chGreen.setSelected(false);
 		            chBlue.setSelected(false);
@@ -112,7 +108,6 @@ public class DThemes extends JDialog {
 		    @Override
 		    public void itemStateChanged(ItemEvent e) {
 		        if(e.getStateChange() == ItemEvent.SELECTED) {
-		            System.out.println("hello1");
 		            changeColorCard(Color.GRAY);
 		            chGreen.setSelected(false);
 		            chBlue.setSelected(false);
